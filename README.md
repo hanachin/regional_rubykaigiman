@@ -1,4 +1,4 @@
-regional_rubykaigi_man
+regional_rubykaigiman
 ======================
 
-Website for Regional RubyKaigi, powered by middleman (would be)
+Website for Regional RubyKaigi, powered by middleman (i hope so)
