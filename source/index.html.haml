@@ -1,7 +1,190 @@
 ---
-pageable: true
-per_page: 10
 ---
+%section.intro
+  .container
+    .epigraph
+      %blockquote{cite: "http://dablog.rubypal.com/2008/9/13/tracks-a-go-go-at-rubyconf-2008"}
+        “regional” wasn’t going to mean “provincial”
+        %br
+        —that regional conferences could be top-notch events
+        %br
+        —and that hope has been fulfilled beyond what we could possibly have wished for.
+      =link_to "D.A.Black", "http://dablog.rubypal.com/2008/9/13/tracks-a-go-go-at-rubyconf-2008", class: "source"
+    .map
+      #event_01
+        .pin
+          .balloon
+            =link_to "#" do
+              .date 2014-02-08(Sat)
+              .title 札幌中央区ruby会議01
+      #event_02
+        .pin
+          .balloon
+            =link_to "#" do
+              .date 2014-03-01(Sat)
+              .title 沖縄ruby会議01
+
+      #event_03
+        .pin
+          .balloon
+            =link_to "#" do
+              .date 2014-04-19(Sat)
+              .title 大江戸Ruby会議04
+%section.event_index
+  .container
+    .event_before
+      %h2 
+        %span.ruby_icon
+        %span.title これから開催される地域Ruby会議
+      %ul.event_index_before
+        %li
+          =link_to "http://rubykaigi.tdiary.net/" do
+            .heq
+              .date
+                2014-03-01(Sat)
+              .title
+                沖縄Ruby会議01
+        %li
+          =link_to "http://rubykaigi.tdiary.net/" do
+            .heq
+              .date
+                2014-03-01(Sat)
+              .title
+                沖縄Ruby会議01
+        %li
+          =link_to "http://rubykaigi.tdiary.net/" do
+            .heq
+              .date
+                2014-03-01(Sat)
+              .title
+                沖縄Ruby会議01
+    .event_past
+      %h2
+        %sapn.ruby_icon
+        %span.title これまで開催された地域Ruby会議
+      %ul.event_index_past
+        %li
+          %h3.year
+            2013
+            %span.arrow
+              %i.fa.fa-arrow-down
+          %ul.event_index_block
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+        %li
+          %h3.year 2012
+          %ul.event_index_block
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+        %li
+          %h3.year 2011
+          %ul.event_index_block
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+        %li
+          %h3.year 2010
+          %ul.event_index_block
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+        %li
+          %h3.year 2009
+          %ul.event_index_block
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+        %li
+          %h3.year 2008
+          %ul.event_index_block
+            %li
+              =link_to "http://rubykaigi.tdiary.net/" do
+                .date
+                  2014-03-01(Sat)
+                .title
+                  沖縄Ruby会議01
+      %p 
+        未確定情報を含む、今後の開催情報は、日本Rubyの公式Wikiの
+        =link_to "これから開催される地域Ruby会議", "https://github.com/ruby-no-kai/official/wiki/Upcomingregionalrubykaigi", target: "_blank"
+        のページも参照してください。
+
+%section.about_holding
+  %h2 地域Ruby会議を開催するには
+  %h4 開催を決定するよりも前に、連絡用メーリングリストに加入してください。
+  %p メーリングリストへの参加方法は後述します。
+
+  %h4 必要な役割を担う人を決める
+  %p 開催にあたっては、以下の役割を担当する人が必要です:
+  %dl
+    %dt 実行委員長
+    %dd 必ず誰か個人を割り当ててください。複数人でも構いません。
+    %dt るびまのレポート記事担当
+    %dd 他の役割と兼務でも構いません。複数人でも可。
+    %dt 会計
+    %dd おかねを扱う場合には必要です。
+  %p
+    レポート担当は開催までに決めていただいても構いませんが、必ずるびまにレポートを寄稿してもらいたいので、 早めに決めておいてください。
+
+  %h4 開催日時、会場、開催規模を教えてください
+  %p メーリングリストで早めに情報を共有してもらえると、告知に協力できると思うのでご協力をお願いします。
+
+  %h4 過去のRubyKaigiの余剰金からの補助について
+  %p 過去のRubyKaigiの余剰金から、講演者の交通費などの補助を出せるかもしれません。事前にメーリングリストで相談してください。詳しくは下記を参照してください。
+  %p http://qwik.jp/RegionalRubyKaigi/32.html (MLに参加しないと読めません)
+
+  %h4 RegionalRubyKaigiの命名規約
+  %p 「RegionalRubyKaigi(地域Ruby会議)」は総称表現です。個別の開催には下記の命名規約にしたがって名前をつけてください。
+  %ul
+    %li 日本語表記は、「開催都市または地域名」 + 「Ruby会議」(例:東京Ruby会議)
+    %li 英語表記は、「RegionName」 + 「RubyKaigi) (例:TokyoRubyKaigi)
+    %li 開催回数は、"%02d" % count (例:01)。countは1オリジン
+    %li 公式タグは、"RegionName" + "RubyKaigi" + count の lowcase。例: tokyorubykaigi01
+    %li 公式ハッシュタグは公式タグよりも短いものがよいでしょう。例: tkrk01
+  %h4 開催が決定したら
+  %p 実行委員長(と、実行委員長が必要とする人物)に、regional.rubykaigi.org の管理者権限をさしあげます(サイトコンテンツを更新するため)。これにあたり:
+  %ul
+    %li RubyKaigi日記を更新してさまざまな告知ができるように、更新アカウントの情報をお伝えします。教えてもらっていなければ、連絡用MLで悲鳴をあげてください
+    %li るびまのレポート記事用の issue をるびまの編集リポジトリへ新規作成してください。
+    %ul
+      %li 件名は「○○ Ruby 会議 0x レポート」としてください。タグや担当、マイルストーンはあとで編集が設定しますので不要です。
+      %li 本文の例。「○○ Ruby 会議の開催が決まったので、レポート作成 issue を起こします。レポート担当は @ xxx です。」
+      %li 以降、るびまからの連絡はこの issue に対して行います (主に開催後、るびまの発行予定が立ってからになります)。
+
+  %h4 「公式サイト」に書くこと
+  %ul
+    %li 他の開催を参考にしてください :)
+    %li トークの録画やストリーミング配信の予定についてもアナウンスしておきましょう
+    %li 今どきはTwitter用のハッシュタグも書いておくと良いと思います。ハッシュタグは公式タグ(主にブクマ用)よりも短いもののほうが、現地でのスマートフォンなどからのtweetに優しいと思います。
+
 - if paginate && num_pages > 1
   %p
     Page #{page_number} of #{num_pages}
@@ -18,3 +201,22 @@ per_page: 10
 - if paginate
   - if next_page
     %p= link_to 'Next page', next_page
+%aside
+  %h2 Recent Articles
+  %ol
+    - blog.articles[0...10].each do |article|
+      %li
+        = link_to article.title, article
+        %span= article.date.strftime('%b %e')
+  %h2 Tags
+  %ol
+    - blog.tags.each do |tag, articles|
+      %li
+        = link_to tag, tag_path(tag)
+        (#{articles.size})
+  %h2 By Year
+  %ol
+    - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+      %li
+        = link_to year, blog_year_path(year)
+        (#{articles.size})
