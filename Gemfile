@@ -5,6 +5,9 @@ source 'http://rubygems.org'
 gem "middleman", "~> 3.2.0"
 gem "middleman-blog", "~> 3.5.1"
 
+gem "susy"
+gem 'font-awesome-middleman'
+
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 
