@@ -8,24 +8,19 @@
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     = stylesheet_link_tag "normalize", "all"
   %body
+    %header
+      .container
+        %h1
+          =link_to "Regional Ruby Kaigi", "/"
+        %nav
+          %ul
+            %li
+              = link_to "RubyKaigi日記", "http://rubykaigi.tdiary.net/"
+            %li
+              = link_to "開催するには", "#"
+
     #main{role: "main"}
       = yield
-    %aside
-      %h2 Recent Articles
-      %ol
-        - blog.articles[0...10].each do |article|
-          %li
-            = link_to article.title, article
-            %span= article.date.strftime('%b %e')
-      %h2 Tags
-      %ol
-        - blog.tags.each do |tag, articles|
-          %li
-            = link_to tag, tag_path(tag)
-            (#{articles.size})
-      %h2 By Year
-      %ol
-        - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-          %li
-            = link_to year, blog_year_path(year)
-            (#{articles.size})
+    %footer
+      ©2014 Regional RubyKaigi
+
