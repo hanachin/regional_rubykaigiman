@@ -1,0 +1,294 @@
+@import "compass"
+@import "susy"
+@import "font-awesome"
+
+// susy setting
+$total-columns  : 12
+$column-width   : 4em
+$gutter-width   : 1em
+$grid-padding   : $gutter-width
+
+$main-color: #ebdf5b
+$main-base-color: #efeccb
+// $main-base-color: #f6f2c1
+$main-dark-color: #d9cb2d
+$sub-color: #f8f7f7
+$sub-dark-color: #b2b2b2
+
+.container
+  +container
+
+header
+  position: fixed
+  top: 0
+  width: 100%
+  height: 70px
+  overflow: hidden
+  color: white
+  background-color: $main-dark-color
+  border:
+    bottom: 4px solid darken($main-dark-color, 5%)
+  +box-sizing(border-box)
+  z-index: 1
+  h1
+    float: left
+    font-size: 24px
+    line-height: 1
+    margin:
+      top: 6px
+      right: 20px
+    a
+      text-decoration: none
+      color: white
+      +text-shadow(darken($main-dark-color, 5%) 2px 2px 0px)
+      &:hover
+        color: lighten($main-color, 5%)
+  nav
+    ul
+      li
+        display: table-cell
+        a
+          color: white
+          text-decoration: none
+          padding: 10px 20px
+          margin-left: 10px
+          line-height: 2.5
+          &:hover
+            color: lighten($main-color, 5%)
+.intro
+  position: relative
+  width: 100%
+  height: 680px
+  background:
+    color: $main-base-color
+    image: image-url("japan.png")
+    position: right 10% center
+    size: 700px 650px
+    repeat: no-repeat
+  margin-top: 70px
+
+.epigraph
+  padding-top: 50px
+  width: 70%
+  blockquote
+    margin: 0 auto
+    color: $main-dark-color
+    border: 1px solid darken($main-color, 10%)
+    padding: 30px 20px
+    line-height: 2
+    font-size: 18px
+    background-color: rgba(255,255,255,.8)
+  .source
+    float: right
+    color: darken($main-color, 10%)
+    font-size: 18px
+    text-decoration: none
+    padding: 10px 20px
+    &:hover
+      background-color: rgba(255,255,255,.3)
+      color: white
+.map
+  position: absolute
+  top: 0
+  right: 10%
+  width: 500px
+  height: 600px
+#event_01
+  position: absolute
+  top: 82px
+  left: 328px
+  .pin
+    position: relative
+    width: (60px / 2)
+    height: (72px / 2)
+    background:
+      image: url("../images/icon_map.png")
+      size: 100% auto
+      repeat: no-repeat
+    cursor: pointer
+    .balloon
+      display: none
+      position: absolute
+      top: -120px
+      left: -30px
+      width: 240px
+      height: 100px
+      background-color: rgba(255,255,255,.8)
+      +box-sizing(border-box)
+      a
+        display: block
+        color: #333
+        padding: 20px
+        text-decoration: none
+      &:before
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border: 10px solid rgba(255,255,255,0)
+        border-top-color: rgba(255,255,255,.8)
+        bottom: -20px
+        left: 34px
+      &:hover
+        background-color: rgba(255,255,255,1)
+        &:before
+          border-top-color: rgba(255,255,255,1)
+      .date
+        font-size: 12px
+        line-height: 2
+        width: 100%
+        border-bottom: 1px solid $main-color
+        margin-bottom: 4px
+    &:hover
+      .balloon
+        display: block
+#event_02
+  @extend #event_01
+  top: 570px
+  left: 0
+#event_03
+  @extend #event_01
+  top: 312px
+  left: 282px
+
+.event_index
+  background-color: white
+  width: 100%
+  color: $sub-dark-color
+  margin-top: -20px
+  h2
+    color: darken($sub-dark-color, 20%)
+    padding: 70px 0 40px
+    border-bottom: 4px solid rgb(255, 255, 255)
+    .title
+      float: left
+      line-height: 1.4
+      padding-left: 4px
+  ul.event_index_before
+    list-style: none
+    padding: 80px 0
+    margin: 60px auto
+    li
+      display: table-cell
+      &:hover
+        a
+          color: white
+        .heq
+          color: black
+      a
+        display: block
+        width: (980px / 3)
+        height: 100%
+        color: white
+        font-size: 18px
+        text-decoration: none
+        text-align: center
+      .heq
+        display: block
+        position: relative
+        width: 200px
+        height: 100px
+        margin: 0 auto 10px
+        background-color: lighten($main-dark-color, 10%)
+        padding: 10px 20px
+        line-height: 2
+        +box-sizing(border-box)
+        &:before
+          content: ''
+          position: absolute
+          top: -70px
+          left: 0
+          width: 0
+          border-bottom: 70px solid lighten($main-dark-color, 10%)
+          border-left: 100px solid transparent
+          border-right: 100px solid transparent
+        &:after
+          content: ''
+          position: absolute
+          bottom: -70px
+          left: 0
+          width: 0
+          border-top: 70px solid lighten($main-dark-color, 10%)
+          border-left: 100px solid transparent
+          border-right: 100px solid transparent
+        .date
+          font-size: 14px
+.event_past
+  p
+    width: 80%
+    padding: 40px
+    margin: 80px auto
+    background-color: white
+    border: 1px solid lighten($sub-dark-color, 20%)
+    color: black
+    a
+      color: $sub-dark-color
+.event_index_past
+  list-style: none
+  text-align: center
+  margin-top: 30px
+  padding-left: 0
+  +clearfix
+  li
+    display: block
+    float: left
+    width: (940px / 4)
+  .year
+    padding: 6px
+    background-color: lighten($main-dark-color,10%)
+    color: white
+    height: 40px
+    margin: 30px 40px 30px 0
+    cursor: pointer
+    +box-sizing(border-box)
+    +border-radius(2px)
+    +text-shadow(darken($main-dark-color, 5%) 2px 2px 0px)
+    +box-shadow(darken($main-dark-color, 2%)  0px 2px 0px)
+    &:hover
+      background-color: darken($main-dark-color, 20%)
+      +text-shadow(darken($main-dark-color, 2%) 0px 0px 0px)
+      +box-shadow(darken($main-dark-color, 2%)  0px 0px 0px)
+      .arrow
+        display: block
+    .arrow
+      display: none
+      +text-shadow(none)
+      color: darken($main-dark-color, 20%)
+      font-weight: bold
+.event_index_past_link
+  text-align: left
+  margin: 0
+  padding: 0
+.event_index_block
+  position: absolute
+  width: (940px / 4)
+  display: none
+  padding: 0
+  z-index: 10
+  li
+    border-bottom: 1px dotted lighten($sub-dark-color, 20%)
+    background-color: white
+    &:nth-last-child(1)
+      border-bottom: none
+  a
+    display: block
+    color: darken($sub-dark-color, 5%)
+    text-decoration: none
+    text-align: left
+    background-color: lighten($sub-color, 5%)
+    padding: 10px
+    margin: 8px
+    box-sizing: border-box
+    &:hover
+      color: black
+
+.ruby_icon
+  display: block
+  float: left
+  background:
+    image: image-url("ruby_icon.png")
+    size: 100% 100%
+    repeat: no-repeat
+  width: 36px
+  height: 30px
+  
