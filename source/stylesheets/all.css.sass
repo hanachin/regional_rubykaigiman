@@ -18,6 +18,8 @@ $sub-dark-color: #b2b2b2
 .container
   +container
 
+.ul-unstyled
+  list-style: none
 header
   position: fixed
   top: 0
@@ -229,7 +231,7 @@ header
   margin-top: 30px
   padding-left: 0
   +clearfix
-  li
+  > li
     display: block
     float: left
     width: (940px / 4)
@@ -245,15 +247,16 @@ header
     +text-shadow(darken($main-dark-color, 5%) 2px 2px 0px)
     +box-shadow(darken($main-dark-color, 2%)  0px 2px 0px)
     &:hover
-      background-color: darken($main-dark-color, 20%)
+      background-color: darken($main-dark-color, 8%)
       +text-shadow(darken($main-dark-color, 2%) 0px 0px 0px)
       +box-shadow(darken($main-dark-color, 2%)  0px 0px 0px)
       .arrow
         display: block
     .arrow
       display: none
+      margin-top: 8px
       +text-shadow(none)
-      color: darken($main-dark-color, 20%)
+      color: darken($main-dark-color, 8%)
       font-weight: bold
 .event_index_past_link
   text-align: left
@@ -261,26 +264,45 @@ header
   padding: 0
 .event_index_block
   position: absolute
-  width: (940px / 4)
+  width: 400px
   display: none
   padding: 0
+  border: 1px solid $main-color
   z-index: 10
-  li
-    border-bottom: 1px dotted lighten($sub-dark-color, 20%)
+  > li
+    width: 100%
+    border-bottom: 1px dotted lighten($main-dark-color, 20%)
     background-color: white
     &:nth-last-child(1)
       border-bottom: none
+    &:hover
+      background-color: lighten($main-dark-color, 20%)
+      color: white
   a
+    position: relative
     display: block
-    color: darken($sub-dark-color, 5%)
+    color: darken($main-dark-color, 5%)
     text-decoration: none
     text-align: left
-    background-color: lighten($sub-color, 5%)
-    padding: 10px
-    margin: 8px
+    padding: 16px 20px
     box-sizing: border-box
     &:hover
-      color: black
+      color: white
+    ul
+      +experimental( padding-start, 0 )
+      & > li
+        display: table-cell
+    .date
+      font-size: 12px
+      line-height: 2
+      padding-right: 10px
+    i
+      position: absolute
+      top: 36%
+      right: 10px
+
+      color: white
+
 
 .ruby_icon
   display: block
@@ -292,3 +314,8 @@ header
   width: 36px
   height: 30px
   
+
+#about_holding
+  background:
+    color: $sub-color
+  padding-top: 70px
